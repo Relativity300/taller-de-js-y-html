@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  id="Nombres"  type="name">
+    <input id="apellidos"  type="name">
+    <input id="Email"  type="email">
+    <input id="Email"  type="number">
+    <input  id="Contraseña" type="password">
+    <button onclick=""> Ebiar.</button>
+
+    <script>
+
+        
+
+const n= document.getElementById("Nombres").value;
+const a= document.getElementById("apellidos").value;
+const d= document.getElementById("Documento").value;
+const e= document.getElementById("Email").value;
+const t= document.getElementById("Teléfono").value;
+const c= document.getElementById("Contraseña").value;
+
+localStorage.setItem("Nombres",n);
+localStorage.setItem("apellidos",a);
+localStorage.setItem("Documento",d);
+localStorage.setItem("Email",e);
+localStorage.setItem("Teléfono",t);
+localStorage.setItem("Contraseña",c);
+
+    </script>
+</body>
+</html>

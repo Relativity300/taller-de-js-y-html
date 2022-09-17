@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <nav class="navbar sticky-top bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Johan Andres Rojas Naranjo.</a>
+        </div>
+    </nav>
+<h1 id="3">Una empresa de envío de mercancías, tiene un plan de tarifas y descuentos sobre el valor del envío de mercancía de sus clientes:</h1>
+<div class="div-center">
+    <div class="div-whi">
+<label for="">Kg </label>
+<input id="1" type="number" >
+<label for="">valor de la mercancía está entre </label>
+<input id="2" type="number" >
+<label  for="">x si ES lunes?</label>
+<input id="3" type="text" >
+<button onclick="imprimir()"> Calcular.</button>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+function imprimir(){
+let Kg= document.getElementById("1").value;
+let VL= document.getElementById("2").value;
+let L= document.getElementById("3").value;
+
+
+if (Kg<100 ) {
+
+    if (VL>=300000 && VL<=600000 && L!=null) {
+        tr= tr*0.10;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else if (VL>600000 && VL<=1000000 && L!=null ) {
+        tr= tr*0.20;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else if (VL>1000000 && L!=null) {
+        tr= tr*0.30;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+
+    else if(L=="x"){
+        tr= tr*0.50;
+        alert(`Su tarifa esde = ${tr}dddddd`);
+    }
+    
+
+    else{
+    let tr=20000;
+
+    alert(`Su tarifa esde = ${tr}`);
+    }
+}
+
+
+else if (Kg>=100 && Kg<=150) {
+    let tr=25000;
+    if (VL>=300000 && VL<=600000) {
+        tr= tr*0.10;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else if (VL>600000 && VL<=1000000) {
+        tr= tr*0.20;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else if (VL>1000000 ) {
+        tr= tr*0.30;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else{
+    alert(`Su tarifa esde = ${tr}`);
+    }
+}
+else if (Kg>150 && Kg<200) {
+    let tr=30000;
+
+    if (VL>=300000 && VL<=600000) {
+        tr= tr*0.10;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+
+
+
+    else if (VL>600000 && VL<=1000000) {
+        tr= tr*0.20;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else if (VL>1000000 ) {
+        tr= tr*0.30;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else{
+    alert(`Su tarifa esde = ${tr}`);
+    }
+}
+
+
+else if (Kg>=200) {
+    let tr=35000;
+    
+    if (VL>=300000 && VL<=600000) {
+        tr= tr*0.10;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else if (VL>600000 && VL<=1000000) {
+        tr= tr*0.20;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+    else if (VL>1000000 ) {
+        tr= tr*0.30;
+        alert(`Su tarifa esde = ${tr}`);
+
+    }
+
+
+    else{
+    alert(`Su tarifa esde = ${tr}`);
+    }
+
+}
+
+}
+
+</script>
+
+<style>
+
+    
+    .div-center{
+    display: flex;
+    justify-content: center;
+    
+    }
+    .div-whi{
+    width: 10em;
+    position: relative;
+    top: 25vh;
+    }
+    input{
+        margin: 0.1em;
+    }
+    h1{
+        text-align: center;
+        margin: 0%;
+        padding: 0%;
+        position: relative;
+        top: 3em;
+        color: aliceblue;
+    }
+    label{
+        color: aliceblue;
+    }
+    </style>

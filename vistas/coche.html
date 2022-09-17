@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <nav class="navbar sticky-top bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Johan Andres Rojas Naranjo.</a>
+        </div>
+    </nav>
+<h1 id="3">Un coche se mueve, partiendo del reposo, con una aceleración constante de 8 m/s2. Escribir un programa que calcule:
+
+    La velocidad instantánea al cabo de 5 segundos.
+    La velocidad media durante los primeros 5 segundos del recorrido.
+    </h1>
+    <div class="div-center">
+        <div class="div-whi">
+    <button onclick="imprimir()"> Calcular.</button>
+    </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function imprimir(){
+        // Velocidad instantánea = velocidad inicial + aceleración * tiempo
+        // Velocidad media = (velocidad inicial + velocidad final)/2
+            let VI=0+8*5;
+            let VM=0+8/2;
+            alert(`
+            Velocidad instantánea = ${VI} m/s2
+            Velocidad media = ${VM} m/s2`);
+
+    }
+    
+</script>
+
+<style>
+
+    
+    .div-center{
+    display: flex;
+    justify-content: center;
+    
+    }
+    .div-whi{
+    width: 10em;
+    position: relative;
+    top: 25vh;
+    }
+    input{
+        margin: 0.1em;
+    }
+    h1{
+        text-align: center;
+        margin: 0%;
+        padding: 0%;
+        position: relative;
+        top: 3em;
+        color: aliceblue;
+    }
+    label{
+        color: aliceblue;
+    }
+    </style>
