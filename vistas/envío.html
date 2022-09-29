@@ -22,8 +22,8 @@
 <input id="1" type="number" >
 <label for="">valor de la mercancía está entre </label>
 <input id="2" type="number" >
-<label  for="">x si ES lunes?</label>
-<input id="3" type="text" >
+<label  for="">1 si ES lunes y paga con tarjeta propia del almacén?</label>
+<input id="33" type="number" >
 <button onclick="imprimir()"> Calcular.</button>
 </div>
 </div>
@@ -34,114 +34,165 @@
 function imprimir(){
 let Kg= document.getElementById("1").value;
 let VL= document.getElementById("2").value;
-let L= document.getElementById("3").value;
+let L= document.getElementById("33").value;
 
+let tr=0; 
+let trr=0;
 
 if (Kg<100 ) {
 
-    if (VL>=300000 && VL<=600000 && L!=null) {
-        tr= tr*0.10;
+    tr=20000;
+
+    if (VL>=300000 && VL<=600000 && L!=1 && L!=2) {
+        tr= tr *0.10;
+        alert(`Su tarifa esde = ${tr} `);
+
+    }
+    else if (VL>600000 && VL<=1000000 && L!=1 && L!=2) {
+        tr=tr *0.20;
+        alert(`Su tarifa esde = ${tr} ---`);
+
+    }
+    else if (VL>1000000 && L!=1 && L!=2) {
+        tr= tr *0.30;
+        alert(`Su tarifa esde = ${tr} `);
+
+    }
+
+    else if(VL>0 && L==1){
+        tr= tr *0.50;
+        alert(`sólo paga el 50%  Su tarifa esde = ${tr}  `);
+    }
+
+    else if(VL>0 && L==2){
+        tr= tr *0.60;
+        alert(`sólo paga el 60% Su tarifa esde = ${tr}`);
+    }
+
+    else{
         alert(`Su tarifa esde = ${tr}`);
+    }
+}
+
+// -------------------------------------------------------------------------
+
+
+ else if (Kg>=100 && 150>Kg ) {
+
+    tr=25000;
+        
+    if (VL>=300000 && VL<=600000 && L!=1 && L!=2) {
+        tr=tr *0.10;
+        alert(`Su tarifa esde = ${tr} `);
 
     }
-    else if (VL>600000 && VL<=1000000 && L!=null ) {
-        tr= tr*0.20;
+    else if (VL>600000 && VL<=1000000 && L!=1 && L!=2) {
+        tr= tr *0.20;
+        alert(`Su tarifa esde = ${tr} ---`);
+
+    }
+    else if (VL>1000000 && L!=1 && L!=2) {
+        tr=tr *0.30;
+        alert(`Su tarifa esde = ${tr} `);
+
+    }
+
+   
+    else if(VL>0 && L==1){
+        tr= tr *0.50;
+        alert(`sólo paga el 50%  Su tarifa esde = ${tr}`);
+    }
+
+    else if(VL>0 && L==2){
+        tr= tr *0.60;
+        alert(`sólo paga el 60% Su tarifa esde = ${tr}`);
+    }
+
+    else{
         alert(`Su tarifa esde = ${tr}`);
-
     }
-    else if (VL>1000000 && L!=null) {
-        tr= tr*0.30;
-        alert(`Su tarifa esde = ${tr}`);
+}
 
-    }
 
-    else if(L=="x"){
-        tr= tr*0.50;
-        alert(`Su tarifa esde = ${tr}dddddd`);
-    }
+
+// -------------------------------------------------------------------------
+
+
+else if (Kg>=150 && 200>Kg ) {
     
+    tr=30000;
 
+    if (VL>=300000 && VL<=600000 && L!=1 && L!=2) {
+        tr= tr *0.10;
+        alert(`Su tarifa esde = ${tr} `);
+
+    }
+    else if (VL>600000 && VL<=1000000 && L!=1 && L!=2) {
+        tr=tr *0.20;
+        alert(`Su tarifa esde = ${tr} ---`);
+
+    }
+    else if (VL>1000000 && L!=1 && L!=2) {
+        tr= tr *0.30;
+        alert(`Su tarifa esde = ${tr} `);
+
+    }
+
+   
+    else if(VL>0 && L==1){
+        tr= tr *0.50;
+        alert(`sólo paga el 50%  Su tarifa esde = ${tr}`);
+    }
+
+    else if(VL>0 && L==2){
+        tr= tr *0.60;
+        alert(`sólo paga el 60% Su tarifa esde = ${tr}`);
+    }
     else{
-    let tr=20000;
-
-    alert(`Su tarifa esde = ${tr}`);
+        alert(`Su tarifa esde = ${tr}`);
     }
 }
 
 
-else if (Kg>=100 && Kg<=150) {
-    let tr=25000;
-    if (VL>=300000 && VL<=600000) {
-        tr= tr*0.10;
-        alert(`Su tarifa esde = ${tr}`);
+// -------------------------------------------------------------------------
+
+
+else if (200<=Kg ) {
+
+    tr=35000;
+
+    if (VL>=300000 && VL<=600000 && L!=1 && L!=2) {
+        tr= tr *0.10;
+        alert(`Su tarifa esde = ${tr} `);
 
     }
-    else if (VL>600000 && VL<=1000000) {
-        tr= tr*0.20;
-        alert(`Su tarifa esde = ${tr}`);
+    else if (VL>600000 && VL<=1000000 && L!=1 && L!=2) {
+        tr= tr *0.20;
+        alert(`Su tarifa esde = ${tr} ---`);
 
     }
-    else if (VL>1000000 ) {
-        tr= tr*0.30;
-        alert(`Su tarifa esde = ${tr}`);
+    else if (VL>1000000 && L!=1 && L!=2) {
+        tr= tr *0.30;
+        alert(`Su tarifa esde = ${tr} `);
 
     }
+
+   
+    else if(VL>0 && L==1){
+        tr= tr *0.50;
+        alert(`sólo paga el 50%  Su tarifa esde = ${tr}`);
+    }
+
+    else if(VL>0 && L==2){
+        tr= tr *0.60;
+        alert(`sólo paga el 60% Su tarifa esde = ${tr}`);
+    }
+
     else{
-    alert(`Su tarifa esde = ${tr}`);
-    }
-}
-else if (Kg>150 && Kg<200) {
-    let tr=30000;
-
-    if (VL>=300000 && VL<=600000) {
-        tr= tr*0.10;
         alert(`Su tarifa esde = ${tr}`);
-
-    }
-
-
-
-    else if (VL>600000 && VL<=1000000) {
-        tr= tr*0.20;
-        alert(`Su tarifa esde = ${tr}`);
-
-    }
-    else if (VL>1000000 ) {
-        tr= tr*0.30;
-        alert(`Su tarifa esde = ${tr}`);
-
-    }
-    else{
-    alert(`Su tarifa esde = ${tr}`);
     }
 }
 
-
-else if (Kg>=200) {
-    let tr=35000;
-    
-    if (VL>=300000 && VL<=600000) {
-        tr= tr*0.10;
-        alert(`Su tarifa esde = ${tr}`);
-
-    }
-    else if (VL>600000 && VL<=1000000) {
-        tr= tr*0.20;
-        alert(`Su tarifa esde = ${tr}`);
-
-    }
-    else if (VL>1000000 ) {
-        tr= tr*0.30;
-        alert(`Su tarifa esde = ${tr}`);
-
-    }
-
-
-    else{
-    alert(`Su tarifa esde = ${tr}`);
-    }
-
-}
 
 }
 
